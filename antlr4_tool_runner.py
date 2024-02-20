@@ -87,9 +87,9 @@ def install_jre(java_version='11'):
                 java = os.path.join(bindir, 'java')
                 return java
 
-    r = input(f"ANTLR tool needs Java to run; install Java JRE 11 yes/no (default yes)? ")
-    if r.strip().lower() not in {'yes', 'y', ''}:
-        exit(1)
+    # r = input(f"ANTLR tool needs Java to run; install Java JRE 11 yes/no (default yes)? ")
+    # if r.strip().lower() not in {'yes', 'y', ''}:
+    #     exit(1)
     install_dir = jdk.install(java_version, jre=True)
     print(f"Installed Java in {install_dir}; remove that dir to uninstall")
     bindir = find_bin_dir(install_dir)
